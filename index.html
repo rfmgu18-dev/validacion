@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validación</title>
+    <title>Validacion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+    <form id="form">
+        <h1>Validacion</h1>
+        
+        <div class="input-div">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Nombre de Usuario">
+            <p class="information">Debe incluir 1 numero y 1 letra. Minimo 5 caracteres, maximo 16 caracteres.</p>
+        </div>
+
+        <div class="input-div">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Correo Electronico">
+            <p class="information">El correo debe seguir el formato: ejemplo@gmail.com</p>
+        </div>
+
+        <div class="input-div">
+            <label for="countries">Pais:</label>
+            <select name="countryCode" id="countries">
+                <option value="" selected disabled>Seleccione un pais</option>
+                <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                <option data-countryCode="CL" value="56">Chile (+56)</option>
+                <option data-countryCode="CO" value="57">Colombia (+57)</option>
+                <option data-countryCode="ES" value="34">Spain (+34)</option>
+                <option data-countryCode="MX" value="52">Mexico (+52)</option>
+                <option data-countryCode="US" value="1">USA (+1)</option>
+                <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+                </select>
+            <p class="information">Debes seleccionar un pais</p>
+        </div>
+
+        <div class="input-div">
+            <label for="phone">Numero telefonico:</label>
+            <div class="input-phone">
+                <span id="phone-code">+##</span>
+                <input type="number" id="phone" placeholder="Número Telefónico">
+            </div>
+            <p class="information">Acepta solo numeros.</p>
+        </div>
+
+        <div class="input-div">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Contraseña">
+            <p class="information">Debe contener al menos una mayúscula, una minúscula y un numero. Minimo 6 caracteres, maximo 24 caracteres.</p>
+        </div>
+
+        <div class="input-div">
+            <label for="confirm-password">Confirmar Contraseña:</label>
+            <input type="password" id="confirm-password" placeholder="Confirmar Contraseña">
+            <p class="information">Debe coincidir con la contraseña</p>
+        </div>
+
+        <button id="boton" disabled>Registrar</button>
+    </form>
+
+    <footer class="main-footer">
+        <p>Desarrollado por 
+        <a href="https://github.com/mariangel-ms" target="_blank">Rubén Maldonado</a>
+    </p>
+    </footer>
+
 </body>
+<script src="scripts.js"></script>
 </html>
