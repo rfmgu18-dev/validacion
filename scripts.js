@@ -20,18 +20,18 @@ const form = document.querySelector("#form")
     });
 
 // Funcion Principal
-const validation = (event, valid, element) => {
+const changeValidation = (event, valid, inputElement) => {
             const information = event.target.parentElement.children[2];
             Boton.disabled = !usernameValid || !emailValid || !contraseñaValid || !phoneValid || !confirmContraValid || !countriesValid ? true : false;
         console.log("information", information);
         
         if (valid) {
-            element.classList.add("true");
-            element.classList.remove("false");
+            inputElement.classList.remove("false");
+            inputElement.classList.add("true");
             information.classList.remove("show-information");
         } else {
-            element.classList.add("false");
-            element.classList.remove("true");
+            inputElement.classList.remove("true");
+            inputElement.classList.add("false");
             information.classList.add("show-information");
         }
 }
@@ -46,14 +46,14 @@ const validation = (event, valid, element) => {
     usernameInput.addEventListener("input", event => {
           console.log(event.target.value);
         usernameValid = NOMBRE_REGEX.test(event.target.value);
-        validation(event, usernameValid, usernameInput);
+        changeValidation(event, usernameValid, usernameInput);
 
     });
 
 emailInput.addEventListener("input", event => {
     console.log(event.target.value);
     emailValid = EMAIL_REGEX.test(event.target.value);
-    validation(event, emailValid, emailInput)
+    changeValidation(event, emailValid, emailInput)
     
 });
 
@@ -65,7 +65,7 @@ countries.addEventListener("input", event => {
     console.log(countriesValid);
     countries.classList.add("true");
     phoneCodeInput.classList.add("true");
-    validation(event,null,null);
+    changeValidation(event,null,null);
 });
 
 phoneInput.addEventListener("input", event => {
@@ -88,25 +88,25 @@ phoneInput.addEventListener("input", event => {
 contraseñaInput.addEventListener("input", event => {
     console.log(event.target.value);
     contraseñaValid = CONTRASEÑA_REGEX.test(event.target.value);
-    validation(event, contraseñaValid, contraseñaInput);
+    changeValidation(event, contraseñaValid, contraseñaInput);
     
 });
 
 confirmContraInput.addEventListener("input", event => {
     console.log(event.target.value);
     confirmContraValid = contraseñaInput.value === event.target.value
-    validation(event, confirmContraValid, confirmContraInput)
+    changeValidation(event, confirmContraValid, confirmContraInput)
     
 });
 
 form.addEventListener("submit", event =>{
     event.preventDefault();
-    const usuario = {
-        Usuario: usernameInput.value,
-        Email: emailInput.value,
-        Contraseña: contraseñaInput.value,
+    const user = {
         Teléfono: `${phoneCodeInput.innerHTML} ${phoneInput.value}`,
+        Contraseña: contraseñaInput.value,
+        Email: emailInput.value,
+        Usuario: usernameInput.value,
     }
-    console.log(usuario)
-    alert("Se ha registrado su validación correctamente!")
+    console.log(user)
+    alert("Se ha registrado su validación correctamente! Tu usuario es: " + user.Usuario + ", tu email es: " + user.Email + " y tu teléfono es: " + user.Teléfono)
 })
