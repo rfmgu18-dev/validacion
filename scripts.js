@@ -21,7 +21,7 @@ const form = document.querySelector("#form")
 
 // Funcion Principal
 const validation = (event, valid, element) => {
-            const information = event.target.parentElement.children[2];
+            const information = event.target.parentElement.children[2]; // Muestra el mensaje de error
             Boton.disabled = !usernameValid || !emailValid || !contraseñaValid || !phoneValid || !confirmContraValid || !countriesValid ? true : false;
         console.log("information", information);
         
@@ -42,6 +42,8 @@ const validation = (event, valid, element) => {
     let contraseñaValid = false;
     let confirmContraValid = false;
     let countriesValid
+
+    //Variables
 
     usernameInput.addEventListener("input", event => {
           console.log(event.target.value);
@@ -108,5 +110,5 @@ form.addEventListener("submit", event =>{
         Teléfono: `${phoneCodeInput.innerHTML} ${phoneInput.value}`,
     }
     console.log(usuario)
-    alert("Se ha registrado su validación correctamente!")
+    alert("Se ha registrado su validación exitosamente!")
 })
