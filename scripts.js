@@ -89,6 +89,9 @@ contraseñaInput.addEventListener("input", event => {
     console.log(event.target.value);
     contraseñaValid = CONTRASEÑA_REGEX.test(event.target.value);
     changeValidation(event, contraseñaValid, contraseñaInput);
+    // Parche del bug
+    confirmContraValid = contraseñaInput.value === confirmContraInput.value;
+    changeValidation({ target: confirmContraInput }, confirmContraValid, confirmContraInput);
     
 });
 
