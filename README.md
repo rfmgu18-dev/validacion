@@ -24,6 +24,7 @@ Este proyecto se basa en un formulario de registro, en el cual se deben rellenar
 | **Teléfono**    | Entre 7 y 15 dígitos numéricos.    |
 | **Contraseña**    | 6-16 caracteres, debe incluir al menos una mayúscula, una minúscula y un número. |
 | **Confirmación**    | Debe coincidir exactamente con la contraseña principal.    |
+----------------------------------------------------------------------------------
 Este es un cuadro que explica las reglas y condiciones de las Expresiones Regulares (REGEX) usadas en el código
 ## ▶ Autor detrás del Proyecto
 Desarrollado por Rubén Maldonado.
