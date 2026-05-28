@@ -15,7 +15,7 @@ Este proyecto se basa en un formulario de registro, en el cual se deben rellenar
 | HTML   | Estructura semántica del código |
 | CSS   | Estilos, márgenes y diseño del código |
 | JS   | Lógica y funcionamiento del código |
-# ▶ Reglas de Validación
+## ▶ Reglas de Validación
 
 | Campo    | Regla de Validación    |
 |---|---|
