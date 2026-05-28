@@ -1,5 +1,5 @@
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-const CONTRASEÑA_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+const CONTRASEÑA_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,24}$/
 const NOMBRE_REGEX = /^(?=.*[a-z])(?=.*[0-9]).{6,16}$/;
 const PHONE_REGEX = /^[0-9]{6,16}$/;
 
