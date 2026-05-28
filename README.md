@@ -5,9 +5,9 @@ Este proyecto se basa en un formulario de registro, en el cual se deben rellenar
 - **Estilo Futuristas**: Interfaz con efectos de desenfoque de fondo, bordes sutiles y sombras de neón.
 - **Validación con REGEX**: Control estricto de entradas con Expresiones Regulares para el Username, Email, Teléfono y Contraseñas.
 - **Interactividad**:
-  -- El botón de registro se habilita solo cuando todos los campos son válidos.
-  -- El selector de países actualiza automáticamente el prefijo telefónico.
-  -- Los campos de entrada y el código de país cambian de color (Verde/Rojo) simultáneamente según la validez.
+  - El botón de registro se habilita solo cuando todos los campos son válidos.
+  - El selector de países actualiza automáticamente el prefijo telefónico.
+  - Los campos de entrada y el código de país cambian de color (Verde/Rojo) simultáneamente según la validez.
 **Diseño Responsive**: Aparte de todo esto, el código posee una configuración responsive para teléfonos y monitores grandes.
 ## ▶ Tecnologías Utilizadas
   
