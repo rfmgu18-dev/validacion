@@ -10,9 +10,9 @@ const emailInput = document.querySelector("#email");
 const contraseñaInput = document.querySelector("#password");
 const phoneInput = document.querySelector("#phone");
 const phoneCodeInput = document.querySelector("#phone-code");
-const confirmContraInput =document.querySelector("#confirm-password")
-const Boton = document.querySelector("#boton")
-const form = document.querySelector("#form")
+const confirmContraInput =document.querySelector("#confirm-password");
+const Boton = document.querySelector("#boton");
+const form = document.querySelector("#form");
 
     console.log(countries);
     [...countries].forEach(option => {
